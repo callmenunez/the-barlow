@@ -1,0 +1,89 @@
+// Header, footer, navigation, section 
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+}
+.header {
+  background-color: #3179b7;
+  padding: 20px 0;
+  color: #ffffff;
+  &__linkSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__link {
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-size: .75rem;
+    color: #ffffff;
+    transition: .5s;
+    font-weight: 700;
+    &:hover {
+      color: #ffffff;
+      text-decoration: none;
+      opacity: .5;
+      transition: .5s;
+    }
+  }
+}
+.hero {
+  margin-top: 100px;
+  height: 400px;
+  background-color: orange;
+}
+.about {
+  height: 400px;
+  background-color: green;
+}
+.menu {
+  height: 400px;
+  background-color: blue;
+}
+.parties {
+  height: 400px;
+  background-color: purple;
+}
+.hoursLocation {
+  height: 400px;
+  background-color: yellow;
+}
+.footer {
+  padding: 10px 0;
+  background-color: #3179b7;
+  &__phoneAddress {
+    font-size: .75rem;
+    font-weight: 300;
+    letter-spacing: .25rem;
+    color: #ffffff;
+    text-align: right;
+  }
+  &__phone, &__address {
+    color:#ffffff;
+    transition: .5s;
+    &:hover {
+      opacity: .75;
+      transition: .5s;
+      text-decoration: none;
+      color:#ffffff;
+    }
+  }
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}

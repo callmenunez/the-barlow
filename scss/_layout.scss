@@ -6,6 +6,7 @@ h1, h2, h3, h4, h5, h6, p, a {
   background-color: #3179b7;
   padding: 20px 0;
   color: #ffffff;
+  box-shadow: 0px -5px 20px 10px rgba(0,0,0,0.4);
   &__linkSection {
     display: flex;
     justify-content: center;
@@ -25,41 +26,48 @@ h1, h2, h3, h4, h5, h6, p, a {
       transition: .5s;
     }
   }
+  &__logo {
+    max-width: 200px;
+  }
 }
 .hero {
   margin-top: 100px;
-  height: 400px;
-  background-color: orange;
+  min-height: 800px;
+  background: url(../img/hero.jpg) no-repeat center;
 }
 .about {
   height: 400px;
-  background-color: green;
+  background-color: #fafafa;
+  padding: 60px 0;
 }
 .menu {
-  height: 400px;
-  background-color: blue;
+  background-color: #f6f6f6;
+  padding: 60px 0;
 }
 .parties {
   height: 400px;
-  background-color: purple;
+  background-color: #f1f1f1;
+  padding: 60px 0;
 }
 .hoursLocation {
   height: 400px;
-  background-color: yellow;
+  background-color: #ededed;
+  padding: 60px 0;
 }
 .footer {
   padding: 10px 0;
   background-color: #3179b7;
-  &__phoneAddress {
+  &__text {
     font-size: .75rem;
     font-weight: 300;
     letter-spacing: .25rem;
     color: #ffffff;
-    text-align: right;
+    text-transform: uppercase;
   }
-  &__phone, &__address {
+  &__link {
     color:#ffffff;
     transition: .5s;
+    text-align: right;
     &:hover {
       opacity: .75;
       transition: .5s;

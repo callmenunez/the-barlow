@@ -32,27 +32,93 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .hero {
   margin-top: 100px;
+  height: 100vh;
   min-height: 800px;
-  background: url(../img/hero.jpg) no-repeat center;
+  background: url(../img/hero2.jpg) no-repeat center;
+  background-size: cover;
 }
 .about {
-  height: 400px;
   background-color: #fafafa;
-  padding: 60px 0;
+  padding: 120px 0 120px;
+  &__horizontalCenter {
+    display: flex;
+    align-items: center;
+  }
+  &__img {
+    width: 100%;
+    border-radius: 100%;
+  }
+  &__text {
+    font-size: .85rem;
+    opacity: .75;
+    letter-spacing: .1rem;
+    margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 .menu {
-  background-color: #f6f6f6;
-  padding: 60px 0;
+  background-color: #f1f1f1;
+  padding: 0 0 120px;
+  &__header {
+    font-size: 1.25rem;
+    letter-spacing: .15rem;
+    color: #3179b7;
+    margin: 120px 0 40px;
+    text-align: center;
+  }
+  &__itemName {
+    font-size: 1.25rem;
+    letter-spacing: .15rem;
+    font-weight: 300;
+  }
+  &__itemDescription {
+    font-size: .85rem;
+    opacity: .75;
+    letter-spacing: .1rem;
+    margin-bottom: 20px;
+    line-break: strict;
+  }
 }
 .parties {
-  height: 400px;
-  background-color: #f1f1f1;
-  padding: 60px 0;
+  padding: 120px 0 120px;
+  &__header {
+    font-weight: 200;
+    font-size: 2rem;
+    line-height: 4rem;
+    color: #3179b7;
+    text-align: center;
+  }
+  &__cta {
+    border: 1px solid #3179b7;
+    padding: 20px 60px;
+    margin: 40px auto 0;
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #3179b7;
+    cursor: pointer;
+    background: #ffffff;
+    transition: .2s;
+    letter-spacing: .25rem;
+    display: inline-block;
+    font-weight: 600;
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+      opacity: .5;
+      transition: .5s;
+    }
+  }
+  a:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 .hoursLocation {
-  height: 400px;
   background-color: #ededed;
-  padding: 60px 0;
+  padding: 120px 0 120px; 
 }
 .footer {
   padding: 10px 0;

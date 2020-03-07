@@ -1,6 +1,7 @@
 // Boilerplate css: typography rules, animations, etc
-html {
-  font-family: "Oswald", Helvetica, sans-serif;
+html, h1, h2, h3, h4, h5, h6, p, a {
+  font-family: "Open Sans", Helvetica, sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
+  color: #000000;
 }

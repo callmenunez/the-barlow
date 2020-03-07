@@ -4,9 +4,9 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .header {
   background-color: #3179b7;
-  padding: 20px 0;
+  padding: 1.25rem 0;
   color: #ffffff;
-  box-shadow: 0px -5px 20px 10px rgba(0,0,0,0.4);
+  box-shadow: 0 -.3125rem 1.25rem .625rem rgba(0,0,0,0.4);
   &__linkSection {
     display: flex;
     justify-content: center;
@@ -14,11 +14,12 @@ h1, h2, h3, h4, h5, h6, p, a {
   }
   &__link {
     text-transform: uppercase;
-    letter-spacing: .5rem;
+    letter-spacing: .25rem;
     font-size: .75rem;
     color: #ffffff;
     transition: .5s;
-    font-weight: 700;
+    font-weight: 600;
+    margin: .5rem 0;
     &:hover {
       color: #ffffff;
       text-decoration: none;
@@ -26,20 +27,25 @@ h1, h2, h3, h4, h5, h6, p, a {
       transition: .5s;
     }
   }
+  &__logoSection {
+    order: -1;
+  }
   &__logo {
-    max-width: 200px;
+    width: 10rem;
+    display: flex;
+    margin: auto;
   }
 }
 .hero {
-  margin-top: 100px;
+  margin-top: 6.25rem;
   height: 100vh;
-  min-height: 800px;
+  min-height: 50rem;
   background: url(../img/hero2.jpg) no-repeat center;
   background-size: cover;
 }
 .about {
   background-color: #fafafa;
-  padding: 120px 0 120px;
+  padding: 7.5rem 0 7.5rem;
   &__horizontalCenter {
     display: flex;
     align-items: center;
@@ -52,7 +58,7 @@ h1, h2, h3, h4, h5, h6, p, a {
     font-size: .85rem;
     opacity: .75;
     letter-spacing: .1rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -60,40 +66,40 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .menu {
   background-color: #f1f1f1;
-  padding: 0 0 120px;
+  padding: 0 0 7.5rem;
   &__header {
     font-size: 1.25rem;
     letter-spacing: .15rem;
     color: #3179b7;
-    margin: 120px 0 40px;
+    margin: 7.5rem 0 2.5rem;
     text-align: center;
   }
   &__itemName {
     font-size: 1.25rem;
     letter-spacing: .15rem;
-    font-weight: 300;
+    margin-bottom: .5rem;
   }
   &__itemDescription {
     font-size: .85rem;
     opacity: .75;
     letter-spacing: .1rem;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
     line-break: strict;
   }
 }
 .parties {
-  padding: 120px 0 120px;
+  padding: 7.5rem 0 7.5rem;
   &__header {
     font-weight: 200;
-    font-size: 2rem;
-    line-height: 4rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
     color: #3179b7;
     text-align: center;
   }
   &__cta {
     border: 1px solid #3179b7;
-    padding: 20px 60px;
-    margin: 40px auto 0;
+    padding: 1.25rem 3.75rem;
+    margin: 2.5rem auto 0;
     font-size: 1rem;
     text-decoration: none;
     text-transform: uppercase;
@@ -118,10 +124,47 @@ h1, h2, h3, h4, h5, h6, p, a {
 }
 .hoursLocation {
   background-color: #ededed;
-  padding: 120px 0 120px; 
+  padding: 7.5rem 0 16rem; 
+  &__header {
+    font-size: 1.25rem;
+    letter-spacing: .15rem;
+    color: #3179b7;
+    margin: 2rem 0 1rem;
+  }
+  &__hours {
+    font-size: .85rem;
+    line-height: 1.5rem;
+    opacity: .75;
+    letter-spacing: .1rem;
+    margin-bottom: .5rem;
+  }
+  &__location {
+    font-size: .85rem;
+    line-height: 1.5rem;
+    opacity: .75;
+    letter-spacing: .1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    transition: .5s;
+    color: #000000;
+    display: block;
+    &--link {
+      &:hover {
+        color: #000000;
+        text-decoration: none;
+        cursor: pointer;
+        opacity: .25;
+        transition: .5s;
+      }
+    }
+  }
+  &__iframe {
+    width: 100%;
+    height: 400px;
+  }
 }
 .footer {
-  padding: 10px 0;
+  padding: .625rem 0;
   background-color: #3179b7;
   &__text {
     font-size: .75rem;
@@ -149,12 +192,29 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
+  .header {
+    &__link {
+      margin: 0;
+      letter-spacing: .5rem;
+      font-weight: 700;
+    }
+    &__logoSection {
+      order: 0;
+    }
+    &__logo {
+      width: 12.5rem; 
+    }  
+  }
+  .parties {
+    &__header {
+      font-size: 2rem;
+      line-height: 4rem;
+    }
+  }
 }
 
 // Extra large devices (large desktops, 1200px and up)

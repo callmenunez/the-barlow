@@ -8,7 +8,9 @@
   <meta name="description" content="The Barlow ">
   <meta name="author" content="David Nunez">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/hamburgers.min.css">
   <link rel="stylesheet" href="css/main.css">
+
   <!-- HTML5 Shiv, this allows older versions of ie9 to accept html5. Must live in the header, below any stylesheets -->
     <!--[if lt IE 9]>
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
@@ -20,32 +22,39 @@
   <section class="header fixed-top">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg header__linkSection">
+        <div class="col-lg header__linkSection header__linkSection--active">
           <a href="#about" class="header__link">
             about
           </a>
         </div>
-        <div class="col-lg header__linkSection">
+        <div class="col-lg header__linkSection header__linkSection--active">
           <a href="#menu" class="header__link">
             menu
           </a>
         </div>
-        <div class="col-lg text-center header__logoSection">
+        <div class="col-lg header__logoSection">
           <a href="#" class="header__link">
             <img src="img/the-barlow.svg" alt="The Barlow" class="header__logo">
           </a>
         </div>
-        <div class="col-lg header__linkSection">
+        <div class="col-lg header__linkSection header__linkSection--active">
           <a href="#parties" class="header__link">
             parties
           </a>
         </div>
-        <div class="col-lg header__linkSection">
+        <div class="col-lg header__linkSection header__linkSection--active">
           <a href="#hoursLocation" class="header__link">
             hours/location
           </a>
         </div>
       </div>
+    </div>
+    <div class="header__menu" >
+      <button class="hamburger hamburger--slider" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
     </div>
   </section>
 
@@ -61,7 +70,7 @@
   <section class="about" id="about">
     <div class="container">
       <div class="row justify-content-center about__horizontalCenter">
-        <div class="col-md-3 col-sm-12">
+        <div class="col-md-3 col-sm-12 text-center">
           <img src="img/about.jpg" class="about__img">
         </div>
         <div class="col-md-7 col-sm-12">
@@ -355,6 +364,25 @@
       </div>
     </div>
   </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script>
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      $('.header__linkSection--active').removeClass('header__linkSection--active');
+    // some code..
+    }
+    var $hamburger = $(".hamburger");
+    $hamburger.on("click", function(e) {
+    $hamburger.toggleClass("is-active");
+      $('.header__linkSection').toggleClass('header__linkSection--active')
+      $('.header__linkSection--active').on("click", function(e) {
+        $('.header__linkSection--active').removeClass('header__linkSection--active');
+        $hamburger.removeClass("is-active");
+      })
+    });
+ 
+  </script>
 
 </body>
 </html>

@@ -2,15 +2,33 @@
 h1, h2, h3, h4, h5, h6, p, a {
   margin: 0;
 }
+.hamburger.is-active:hover, .hamburger:hover {
+  opacity: 1;
+}
+.hamburger.is-active .hamburger-inner, .hamburger-inner {
+  background-color: #fff;
+  height: 2px;
+  width: 36px;
+  &:before, &:after {
+    height: 2px;
+    width: 36px;
+    background-color: #fff;
+  }
+}
 .header {
   background-color: #3179b7;
   padding: 1.25rem 0;
   color: #ffffff;
   box-shadow: 0 -.3125rem 1.25rem .625rem rgba(0,0,0,0.4);
   &__linkSection {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
+    transition-duration: .5s;
+    &--active {
+      display: flex;
+      transition-duration: .5s;
+    }
   }
   &__link {
     text-transform: uppercase;
@@ -33,7 +51,14 @@ h1, h2, h3, h4, h5, h6, p, a {
   &__logo {
     width: 10rem;
     display: flex;
-    margin: auto;
+    text-align: left;
+    margin-left: 20px;
+  }
+  &__menu {
+    display: block;
+    position: absolute;
+    top: 26px;
+    right: 20px;
   }
 }
 .hero {
@@ -51,8 +76,9 @@ h1, h2, h3, h4, h5, h6, p, a {
     align-items: center;
   }
   &__img {
-    width: 100%;
+    width: 50%;
     border-radius: 100%;
+    margin-bottom: 2rem;
   }
   &__text {
     font-size: .85rem;
@@ -192,6 +218,11 @@ h1, h2, h3, h4, h5, h6, p, a {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .about {
+    &__img {
+      width: 100%;
+    }
+  }
 }
 
 // Large devices (desktops, 992px and up)
@@ -207,7 +238,12 @@ h1, h2, h3, h4, h5, h6, p, a {
     }
     &__logo {
       width: 12.5rem; 
+      text-align: center;
+      margin: auto;
     }  
+    &__menu {
+      display: none;
+    }
   }
   .parties {
     &__header {

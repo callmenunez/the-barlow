@@ -148,23 +148,23 @@ h1, h2, h3, h4, h5, h6, p, a {
     cursor: pointer;
   }
 }
-.hoursLocation {
+.contact {
   background-color: #ededed;
   padding: 7.5rem 0 16rem; 
   &__header {
     font-size: 1.25rem;
     letter-spacing: .15rem;
     color: #3179b7;
-    margin: 2rem 0 1rem;
+    margin-bottom:.75rem;
+    &--marginTop {
+      margin-top: 2rem;
+    }
+    &--marginTopMobile {
+      display: block;
+      margin-top: 2rem;
+    }
   }
-  &__hours {
-    font-size: .85rem;
-    line-height: 1.5rem;
-    opacity: .75;
-    letter-spacing: .1rem;
-    margin-bottom: .5rem;
-  }
-  &__location {
+  &__text {
     font-size: .85rem;
     line-height: 1.5rem;
     opacity: .75;
@@ -174,24 +174,33 @@ h1, h2, h3, h4, h5, h6, p, a {
     transition: .5s;
     color: #000000;
     display: block;
+    width: fit-content;
     &--link {
+      margin-bottom: 1rem;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(0,0,0,.25);
       &:hover {
+        transition: .5s;
+        cursor: pointer;
         color: #000000;
         text-decoration: none;
-        cursor: pointer;
-        opacity: .25;
+        opacity: .5;
         transition: .5s;
       }
     }
   }
   &__iframe {
     width: 100%;
-    height: 400px;
+    height: 200px;
+    &--marginTopMobile {
+      margin-top: 2rem;
+    }
   }
 }
 .footer {
-  padding: .625rem 0;
-  background-color: #3179b7;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
   &__text {
     font-size: .75rem;
     font-weight: 300;
@@ -200,14 +209,27 @@ h1, h2, h3, h4, h5, h6, p, a {
     text-transform: uppercase;
   }
   &__link {
-    color:#ffffff;
+    color:#3179b7;
     transition: .5s;
     text-align: right;
+    text-decoration: none;
     &:hover {
-      opacity: .75;
-      transition: .5s;
       text-decoration: none;
-      color:#ffffff;
+    }
+    &--socialMedia {
+      fill: #3179b7;
+      width: 1.5rem;
+      height: 1.5rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: .5s;
+      &:hover {
+        opacity: .5;
+        transition: .5s;
+        text-decoration: none;
+        color:#3179b7;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -221,6 +243,19 @@ h1, h2, h3, h4, h5, h6, p, a {
   .about {
     &__img {
       width: 100%;
+    }
+  }
+  .contact {
+    &__header {
+      &--marginTopMobile {
+        margin-top: 0;
+      }
+    }
+    &__iframe {
+      height: 300px;
+      &--marginTopMobile {
+        margin-top: 2rem;
+      }
     }
   }
 }
@@ -249,6 +284,14 @@ h1, h2, h3, h4, h5, h6, p, a {
     &__header {
       font-size: 2rem;
       line-height: 4rem;
+    }
+  }
+  .contact {
+    &__iframe {
+      height: 400px;
+      &--marginTopMobile {
+        margin-top: 0;
+      }
     }
   }
 }

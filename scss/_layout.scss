@@ -67,6 +67,26 @@ h1, h2, h3, h4, h5, h6, p, a {
   min-height: 50rem;
   background: url(../img/hero2.jpg) no-repeat center;
   background-size: cover;
+  &__container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__header {
+    font-size: 5vw;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1rem;
+    font-weight: 700;
+  }
+  &__text {
+    font-size: 4vw;
+    color: #ffffff;
+    text-align: center;
+  }
 }
 .about {
   background-color: #fafafa;
